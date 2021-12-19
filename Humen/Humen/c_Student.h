@@ -9,6 +9,13 @@ public:
 	c_Student();
 	friend std::istream& operator>>(std::istream& in, c_Student& stud)
 	{
+		std::cin.clear();
+		std::cout << "Vvedite name: ";
+		in.getline(stud.name, 50);
+		std::cout << "Vvedite surname: ";
+		in.getline(stud.surname, 50);
+		std::cout << "Vvedite age: ";
+		in >> stud.age;
 		std::cout << "VVedite scholarship: ";
 		in >> stud.step;
 		std::cout << "VVedite nom.kurs: ";

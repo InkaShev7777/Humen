@@ -8,6 +8,14 @@ protected:
 public:
 	friend std::istream& operator>>(std::istream& in, c_SchoolBoy& boy)
 	{
+		std::cin.clear();
+		std::cin.ignore();
+		std::cout << "Vvedite name: ";
+		in.getline(boy.name, 50);
+		std::cout << "Vvedite surname: ";
+		in.getline(boy.surname, 50);
+		std::cout << "Vvedite age: ";
+		in >> boy.age;
 		std::cout << "VVedite class: ";
 		in >> boy.clas;
 		std::cout << "VVedite kol.of lessons: ";

@@ -9,6 +9,13 @@ public:
 	c_Worker();
 	friend std::istream& operator>>(std::istream& in, c_Worker& wor)
 	{
+		std::cin.clear();
+		std::cout << "Vvedite name: ";
+		in.getline(wor.name, 50);
+		std::cout << "Vvedite surname: ";
+		in.getline(wor.surname, 50);
+		std::cout << "Vvedite age: ";
+		in >> wor.age;
 		std::cout << "Vvedite salary: ";
 		in >> wor.salary;
 		std::cout << "Vvedite position: ";
@@ -18,7 +25,7 @@ public:
 	}
 	friend std::ostream& operator<<(std::ostream& out, c_Worker& wor)
 	{
-		out << "WORKER\n";
+		out << "\n\nWORKER\n";
 		out << "--------\n";
 		out << "Name: " << wor.name << "\tSurname: " << wor.surname << "\tAge: " << wor.age << "\n";
 		out << "Position: " << wor.position << "\tSalary: " << wor.salary << "\n\n";
